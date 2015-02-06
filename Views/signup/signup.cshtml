@@ -1,0 +1,73 @@
+﻿@model arduinoWebProject.Models.login
+
+@{
+    ViewBag.Title = "Arduino_Signup";
+}
+      @{
+    
+    Layout="~/Views/Shared/_Layout.cshtml";
+    
+}
+
+    
+    <!-- nav bar is coompleted here-->
+    <div class="container" style="margin-bottom:20px">
+    <div class=" row">
+
+        <div class="col-md-7"  style="margin-left:220px">
+            
+           
+                @using (Html.BeginForm("registerAccount", "signup", FormMethod.Post))
+                {
+                    <div class ="form-login"   style="margin-left:8%">
+            <h2 style="color:#1c8787">Sign Up</h2>
+            <P style="color:#808080">
+                @Html.Label("User Name")
+                </p>
+                @Html.TextBoxFor(x => x.uname,new {@class="form-control input-sm chat-input" })
+           
+                <br/>
+            <p style="color:#808080">@Html.Label("Password")</p>
+                        @Html.TextBoxFor(x => x.pwd,new {@class="form-control input-sm chat-input", type="password"})
+                
+            <br/>
+                <p style="color:#808080">@Html.Label("Confirm Password")</p>
+                @Html.TextBoxFor(x=>x.pwd,new { @class="form-control input-sm chat-input",type="password"})
+            <br/> 
+                <p style="color:#808080">@Html.Label("Email Address")</p>
+               @Html.TextBoxFor(x => x.email,new {@class="form-control input-sm chat-input", type="email"})
+            <br/>
+          
+            <br/>
+                
+            <P>or @Html.ActionLink("LOGIN", "login", "login", new { style="color:#1c8787;font:bold"},null)
+            <input id="b1" type="submit" value="CREAT ACCOUNT" style="background-color:#1c8787; color:white;margin-left:50%"/>
+
+
+            </p>
+
+                
+
+                </div>
+                }
+                
+            
+            
+        </div>
+        </div>
+        
+        
+    
+        </div>
+    <!-- page footer -->
+ 
+    
+
+
+
+
+
+
+   
+
+
