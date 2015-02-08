@@ -29,12 +29,13 @@
                 @Html.Label("User Name")
                 </p>
                 @Html.TextBoxFor(x => x.uname,new {id="t1",@class="form-control input-sm chat-input" })                        
-
+                         @Html.ValidationMessageFor(x=>x.uname)
                         <p id='e1' style="color:red"></p>    
            
                 <br/>
             <p style="color:#808080">@Html.Label("Password")</p>
                         @Html.TextBoxFor(x => x.pwd,new {id="t2",@class="form-control input-sm chat-input", type="password"})
+                         @Html.ValidationMessageFor(x=>x.pwd)
                 <script>
                     $("#t1").on('mouseover', f2);
                     function f2() {
@@ -67,12 +68,12 @@
                        
                     }
                 </script>
-            <br/>
-                <p style="color:#808080">@Html.Label("Confirm Password")</p>
-                @Html.TextBoxFor(x=>x.pwd,new { @class="form-control input-sm chat-input",type="password"})
+            
+       
             <br/> 
                 <p style="color:#808080">@Html.Label("Email Address")</p>
                @Html.TextBoxFor(x => x.email,new {@class="form-control input-sm chat-input", type="email"})
+                         @Html.ValidationMessageFor(x => x.email)
             <br/>
           
             <br/>
